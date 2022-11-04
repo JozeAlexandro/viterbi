@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ngCode>
+    
+    <outBitCount>2</outBitCount>
+    
+    <node>
+        <state>0</state>
+        <input inputValue="0">
+            <output>0</output>
+            <nextState>0</nextState>
+        </input>
+        <input inputValue="1">
+            <output>3</output>
+            <nextState>2</nextState>
+        </input>
+    </node>
+    
+    <node>
+        <state>1</state>
+        <input inputValue="0">
+            <output>1</output>
+            <nextState>0</nextState>
+        </input>
+        <input inputValue="1">
+            <output>2</output>
+            <nextState>2</nextState>
+        </input>
+    </node>
+    
+    <node>
+        <state>2</state>
+        <input inputValue="0">
+            <output>2</output>
+            <nextState>1</nextState>
+        </input>
+        <input inputValue="1">
+            <output>1</output>
+            <nextState>3</nextState>
+        </input>
+    </node>
+    
+    <node>
+        <state>3</state>
+        <input inputValue="0">
+            <output>3</output>
+            <nextState>1</nextState>
+        </input>
+        <input inputValue="1">
+            <output>0</output>
+            <nextState>3</nextState>
+        </input>
+    </node>
+    
+</ngCode>
+
+
+

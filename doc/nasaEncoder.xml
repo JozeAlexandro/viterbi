@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testCode>
+    <stateCount>6</stateCount>
+    
+    <outputs>
+        <sum ID ="XOR0">
+            <input>-1</input>
+            <input>1</input>
+            <input>2</input>
+            <input>4</input>
+            <input>5</input>
+            
+            <output>0</output>
+        </sum>
+    
+         <sum ID ="XOR1">
+            <input>-1</input>
+            <input>0</input>
+            <input>1</input>
+            <input>2</input>
+            <input>5</input>
+            
+            <output>1</output>
+        </sum>
+    </outputs>
+    
+</testCode>
