@@ -94,10 +94,14 @@ bool cXmlParser::checkXmlFile()
 {
     static bool isFileValid = true;
 
+
     if( !misFileChecked )
     {
         /// @todo Проверка файла на валидность XML... Хть минимальная
         misFileChecked = true;
+
+
+
         pt::read_xml( mrFileXml, mPropTree );
     }
 

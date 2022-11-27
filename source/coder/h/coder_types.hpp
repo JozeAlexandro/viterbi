@@ -14,6 +14,7 @@
 #include <map> // Отображение
 #include <array> // Массив
 
+/// @todo namespace descr
 namespace nsViterbiCoder
 {
 /** ****************************************************************************
