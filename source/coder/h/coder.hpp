@@ -21,8 +21,8 @@ using namespace nsViterbiCoder;
 class cCoder final
 {
 public:
-    cCoder() = delete;
-   /* ~cCoder() = default;
+   /* cCoder() = delete;
+    ~cCoder() = default;
     cCoder( const cCoder &rght ) = default;
     cCoder( const cCoder &&rght ) = default;
     const cCoder & operator = ( const cCoder &rght ) = default;*/
@@ -37,8 +37,10 @@ public:
     boost::dynamic_bitset<> code( boost::dynamic_bitset<> data );
     boost::dynamic_bitset<> deCode(boost::dynamic_bitset<> codeData );
 
+
+    /// @todo Не уверен, что должны быть тут, а если тут , то нуэно докуметировать кода сбрасываются
     unsigned input( int bit );
-    void reset() { crntState = 0; }
+    void reset() { crntState = 0; } /// @todo Добавить возможность сброса таблицы и возврата к предыдущей и тд..
 
     unsigned getBitCount() const { return mOutBitCount; }
 
@@ -54,6 +56,10 @@ private:
 
     /// @todo
     cCoderDescrIface & mrCoderDescr;
+
+
+    ///
+    unsigned distanceCount( unsigned left, unsigned right );
 };
 
 }

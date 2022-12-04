@@ -4,6 +4,9 @@
 #include "xml_parser.hpp"
 #include "coder.hpp"
 
+
+#include <iostream>
+
 int main()
 {
     using namespace nsViterbiCoder;
@@ -11,7 +14,11 @@ int main()
     cXmlParser parser(s);
 
     cCoder coder( parser );
+
     coder.testCreateTable();
+
+    std::cout << coder.code( boost::dynamic_bitset<>( 5, 8 ) );
+
 
 
     return 0;
