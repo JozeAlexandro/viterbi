@@ -49,7 +49,25 @@ boost::dynamic_bitset<> cCoder::deCode(boost::dynamic_bitset<> codeData)
 
     const unsigned result = input( codeData[ 0 ] );
 
+    auto [ zeroInput, unitInput ] = test(); {}
 
+//    auto i = zeroInput.mNextState == unitInput.mNextState ? 1 : 0;
+
+/// @todo expected val...    distanceCount( 0, zeroInput.mOutValue );
+
+
+
+    return boost::dynamic_bitset<>();
+}
+
+
+
+std::pair<const sCoderStateDescr &, const sCoderStateDescr &> cCoder::test()
+{
+    const auto &zeroVar = mTable.at( crntState )[ 0 ];
+    const auto &unitVar = mTable.at( crntState )[ 1 ];
+
+    return std::make_pair(zeroVar, unitVar);
 }
 
 unsigned cCoder::input(int bit)
@@ -60,16 +78,6 @@ unsigned cCoder::input(int bit)
 
     return stateVar.mOutValue;
 }
-
-/** @todo для декода свой ввод??
-unsigned input()
-{
-    /// @todo create есчли не креат еще
-    const auto &stateVar = mTable.at( crntState )[ bit ];
-    crntState = stateVar.mNextState;
-
-    return stateVar.mOutValue;
-}*/
 
 
 

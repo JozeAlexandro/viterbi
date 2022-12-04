@@ -60,6 +60,8 @@ private:
 
     ///
     unsigned distanceCount( unsigned left, unsigned right );
+
+    std::pair<const sCoderStateDescr &, const sCoderStateDescr &> test();
 };
 
 }
